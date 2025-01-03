@@ -66,7 +66,7 @@ body{
 }
 
 .mobile-sidebar-menu ul li{  /*FOR MOBILE*/
-    font-size: 18px;
+    font-size: 16px;
     margin: 5px 0;
     border-bottom: 1px solid #f5f7fb;
 }
@@ -148,7 +148,7 @@ body{
 
 .mobile-sidebar-menu ul .sub-list{ /*FOR MOBILE*/
     margin-left: 50px;
-    font-size: 18px;
+    font-size: 16px;
     display: grid;
     grid-template-rows: 0fr;
     transition: 300ms ease-in-out;
@@ -472,14 +472,14 @@ nav .nav-info .user .user-dropdown-menu{
 
  .highlights table thead tr td{
     padding: 10px 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     background-color: #f5f7fb;
  }
 
  .highlights tbody tr td{
     padding: 10px 10px;
-    font-size: 17px;
+    font-size: 16px;
     border-bottom: 1px solid #f5f7fb;
  }
 
