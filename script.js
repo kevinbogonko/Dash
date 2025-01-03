@@ -41,7 +41,6 @@ const subListMobileInformation = document.getElementById('mobile-sub-list-inform
 const user = document.getElementById('user-icon');
 const userDropdownMenu = document.querySelector('.user-dropdown-menu');
 
-
 // FUNCTION FOR TOGGLING MOBILE MENU
 function toggleMobileMenu() {
     mobileMenu.classList.toggle("showMenu");
@@ -55,11 +54,16 @@ function toggleMenu() {
         ul.classList.remove('open');
     });
 
+    Array.from(sidebarMenu.getElementsByClassName('rotate')).forEach(ul => {
+        ul.classList.remove('rotate');
+    });
+
 }
 
 function toggleSideStudentMenuOptions(){
 
     subListStudent.classList.toggle('open');
+    studentTag.childNodes[0].classList.toggle('rotate');
 
     if(sidebarMenu.classList.contains('close')){
         sidebarMenu.classList.toggle('close');
@@ -69,11 +73,13 @@ function toggleSideStudentMenuOptions(){
 
 function toggleSideMobileStudentMenuOptions(){
     subListMobileStudent.classList.toggle('open');
+    studentMobileTag.childNodes[0].classList.toggle('rotate');
 }
 
 function toggleSideTeacherMenuOptions(){
 
     subListTeacher.classList.toggle('open');
+    teacherTag.childNodes[0].classList.toggle('rotate');
 
     if(sidebarMenu.classList.contains('close')){
         sidebarMenu.classList.toggle('close');
@@ -82,15 +88,15 @@ function toggleSideTeacherMenuOptions(){
 }
 
 function toggleSideMobileTeacherMenuOptions(){
-    if(subListMobileTeacher.classList.contains('open')){
-        subListMobileTeacher.classList.remove('open');
-    } else{
-        subListMobileTeacher.classList.add('open');
-    }
+    subListMobileTeacher.classList.toggle('open');
+    teacherMobileTag.childNodes[0].classList.toggle('rotate');
+
+
 }
 
 function toggleSideExamMenuOptions(){
     subListExam.classList.toggle('open');
+    examTag.childNodes[0].classList.toggle('rotate');
 
     if(sidebarMenu.classList.contains('close')){
         sidebarMenu.classList.toggle('close');
@@ -99,15 +105,15 @@ function toggleSideExamMenuOptions(){
 }
 
 function toggleSideMobileExamMenuOptions(){
-    if(subListMobileExam.classList.contains('open')){
-        subListMobileExam.classList.remove('open');
-    } else{
-        subListMobileExam.classList.add('open');
-    }
+    subListMobileExam.classList.toggle('open');
+    examMobileTag.childNodes[0].classList.toggle('rotate');
+
+
 }
 
 function toggleSideInformationMenuOptions(){
     subListInformation.classList.toggle('open');
+    informationTag.childNodes[0].classList.toggle('rotate');
 
     if(sidebarMenu.classList.contains('close')){
         sidebarMenu.classList.toggle('close');
@@ -116,15 +122,13 @@ function toggleSideInformationMenuOptions(){
 }
 
 function toggleSideMobileInformationMenuOptions(){
-    if(subListMobileInformation.classList.contains('open')){
-        subListMobileInformation.classList.remove('open');
-    } else{
-        subListMobileInformation.classList.add('open');
-    }
+    subListMobileInformation.classList.toggle('open');
+    informationMobileTag.childNodes[0].classList.toggle('rotate');
 }
 
 function toggleSideReportMenuOptions(){
     subListReport.classList.toggle('open');
+    reportTag.childNodes[0].classList.toggle('rotate');
 
     if(sidebarMenu.classList.contains('close')){
         sidebarMenu.classList.toggle('close');
@@ -132,19 +136,12 @@ function toggleSideReportMenuOptions(){
 }
 
 function toggleSideMobileReportMenuOptions(){
-    if(subListMobileReport.classList.contains('open')){
-        subListMobileReport.classList.remove('open');
-    } else{
-        subListMobileReport.classList.add('open');
-    }
+    subListMobileReport.classList.toggle('open');
+    reportMobileTag.childNodes[0].classList.toggle('rotate');
 }
 
 function toggleUserInfo(){
-    if(userDropdownMenu.classList.contains('noDisplay')){
-        userDropdownMenu.classList.remove('noDisplay')
-    } else{
-        userDropdownMenu.classList.add('noDisplay')
-    }
+    userDropdownMenu.classList.toggle('open')
 }
 
 mobileHamburger.addEventListener("click", toggleMobileMenu);
